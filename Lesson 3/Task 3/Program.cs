@@ -25,6 +25,7 @@ namespace Task_3
             Fraction result = new Fraction();
             result.top = this.top * y.bot + y.top * this.bot;
             result.bot = this.bot * y.bot;
+            result = result.Collapse(result);
             return result;
         }
 
@@ -33,6 +34,7 @@ namespace Task_3
             Fraction result = new Fraction();
             result.top = this.top * y.bot - y.top * this.bot;
             result.bot = this.bot * y.bot;
+            result = result.Collapse(result);
             return result;
         }
 
@@ -41,6 +43,7 @@ namespace Task_3
             Fraction result = new Fraction();
             result.top = this.top * y.top;
             result.bot = this.bot * y.bot;
+            result = result.Collapse(result);
             return result;
         }
 
@@ -49,7 +52,40 @@ namespace Task_3
             Fraction result = new Fraction();
             result.top = this.top * y.bot;
             result.bot = this.bot * y.top;
+            result = result.Collapse(result);
             return result;
+        }
+
+        public Fraction Collapse(Fraction x)//метод сокращения дробей
+        {
+            int min = 0;
+            bool divflag = false;
+
+            do
+            {
+                min = x.top;//находим наименьшее число из числителя и знгаменателя
+                if (x.top > x.bot)
+                {
+                    min = x.bot;
+                }
+
+                divflag = false;
+
+                for (int i = 2; i <= min; i++)
+                {
+                    if (x.top % i == 0)
+                    {
+                        if (x.bot % i == 0)//если остаток от деления числителя и знаменателя на i ноль - перезаписываем числитель и знаменатель
+                        {
+                            x.top = x.top / i;
+                            x.bot = x.bot / i;
+                            i = min + 1;
+                            divflag = true;//если хоть одно сокрашение за цикл успешно - запускаем цикл снова
+                        }
+                    }
+                }
+            } while (divflag == true);//если за цикл ни одного сокращения не было - завершаем метод сокращения
+            return x;
         }
 
         public string ToString()
@@ -119,6 +155,7 @@ namespace Task_3
             x1.top = Top();
             x1.bot = Bot();
             Console.Clear();
+            x1 = x1.Collapse(x1);
             Console.WriteLine("Первая дробь: " + x1.ToString());
 
             Console.Write("Введите вторую дробь. ");
@@ -126,6 +163,7 @@ namespace Task_3
             x2.top = Top();
             x2.bot = Bot();
             Console.Clear();
+            x2 = x2.Collapse(x2);
             Console.WriteLine("Первая дробь: " + x1.ToString());
             Console.WriteLine("Вторая дробь: " + x2.ToString());
 
