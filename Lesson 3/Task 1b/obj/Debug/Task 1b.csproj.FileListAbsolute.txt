@@ -1,0 +1,7 @@
+D:\GeekBrains геймкодинг\Подготовительный курс\3 урок\Homework 3\Lesson 3\Task 1b\bin\Debug\Task 1b.exe.config
+D:\GeekBrains геймкодинг\Подготовительный курс\3 урок\Homework 3\Lesson 3\Task 1b\bin\Debug\Task 1b.exe
+D:\GeekBrains геймкодинг\Подготовительный курс\3 урок\Homework 3\Lesson 3\Task 1b\bin\Debug\Task 1b.pdb
+D:\GeekBrains геймкодинг\Подготовительный курс\3 урок\Homework 3\Lesson 3\Task 1b\obj\Debug\Task 1b.csproj.CoreCompileInputs.cache
+D:\GeekBrains геймкодинг\Подготовительный курс\3 урок\Homework 3\Lesson 3\Task 1b\obj\Debug\Task 1b.exe
+D:\GeekBrains геймкодинг\Подготовительный курс\3 урок\Homework 3\Lesson 3\Task 1b\obj\Debug\Task 1b.pdb
+D:\GeekBrains геймкодинг\Подготовительный курс\3 урок\Homework 3\Lesson 3\Task 1b\obj\Debug\Task 1b.csprojAssemblyReference.cache
